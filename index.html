@@ -4,20 +4,31 @@
 <script src="js.js"></script>
 <head>
 <title>Skill calculator</title>
+<link rel="icon" type="image/x-icon" href="idea.ico">
 </head>
 <div id="box">
+    <div id="title">Skill Calculator</div>
     <div id="skillcalculator">
-        <div id="kd">
-            K/D:
-            <input type="number" id="killdeath" name="K/D" min="0" max="100" >
+       <div id="kd">
+            <div class="col-3 input-effect">
+                <input class="effect-16" id="killdeath" type="number" placeholder="K/D">
+                <label></label>
+                <span class="focus-border"></span>
+            </div>
         </div>
         <div id="wl">
-            W/L (Win/Loss):
-            <input type="number" id="winloss" name="W/L" min="0" max="100">
-        </div>
+            <div class="col-3 input-effect">
+                <input class="effect-16" id="winloss" type="number" placeholder="W/L (Win/Loss)">
+                <label></label>
+                <span class="focus-border"></span>
+            </div>
+        </div> 
         <div id="hs">
-            Headshot procentage:
-            <input type="number" id="headshots" name="Headshot procentage" min="0" max="100">
+            <div class="col-3 input-effect">
+                <input class="effect-16" id="headshots" type="number" placeholder="Headshot procentage">
+                <label></label>
+                <span class="focus-border"></span>
+            </div>
         </div>
         <div id="results"><h1 id="result">Skill: 0</h1></div>
         <button class="button" onclick="calculateskill()"><span class="button-content">Calculate skill</span></button>

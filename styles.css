@@ -1,97 +1,126 @@
-body {
-    background-color: rgb(36, 36, 36);
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Damion|Muli:400,600');
+body{
+  font-family: 'Muli', sans-serif;
+  background: rgb(236, 223, 204);
 }
-
-#skillcalculator {
-    box-shadow: 0px 0px 20px 4px rgba(29, 29, 29, 0.493);
-    font-size: 20px;
-    width: 50%;
-    line-height: 40px;
-    border-radius: 10px;
-    padding: 20px;
-    top: 20%;
-    transform: translate(-50%, 0);
-    position: fixed;
-    background-color: rgb(49, 49, 49);
-    border: 100px;
-    left: 50%;
+h2 {
+    font-family: 'Damion', cursive;
+    font-weight: 400;
+    color: #4caf50;
+    font-size: 35px;
+    text-align: center;
+    position: relative;
 }
-
-input {
-    padding: 2px;
-    margin: 2px;
-    font-size: 16px;
-    color: white;
-    caret-color: white;
-    background-color: rgba(0, 0, 0, 0);
-    border-radius: 6px;
-    border: 2px solid white;
-    transition: box-shadow .3s;
-    box-shadow: 0px 0px 6px 1px rgba(8, 8, 8, 0.26);
+h2:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    left: 0;
+    top: 22px;
+    background: #4caf50;
+    height: 1px;
 }
-
-
-input:focus {
-    box-shadow: 0px 0px 7px;
-    caret-color: white;
-    transition: box-shadow .3s;
-    outline: 0;
-    border-radius: 6px;
-    border: 2px solid white;
+h2 i {
+    font-style: normal;
+    background: #fff;
+    position: relative;
+    padding: 10px;
 }
+:focus{outline: none;}
 
+/* necessary to give position: relative to parent. */
+input[type="number"]{font: 15px/24px 'Muli', sans-serif; color: rgb(105, 117, 101); width: 100%; box-sizing: border-box; letter-spacing: 1px;}
+
+:focus{outline: none;}
+
+.col-3{float: left; width: 27.33%; margin: 40px 3%; position: relative;} /* necessary to give position: relative to parent. */
+input[type="number"]{font: 15px/24px "Lato", Arial, sans-serif; color: rgb(105, 117, 101); width: 100%; box-sizing: border-box; letter-spacing: 1px;}
+
+.effect-16, 
+.effect-17, 
+.effect-18{border: 0; padding: 4px 0; border-bottom: 1px solid rgb(105, 117, 101); background-color: transparent;}
+
+.effect-16 ~ .focus-border{position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background-color: rgb(60, 61, 55); transition: 0.4s;}
+.effect-16:focus ~ .focus-border,
+.has-content.effect-16 ~ .focus-border{width: 100%; transition: 0.4s;}
+.effect-16 ~ label{position: absolute; left: 0; width: 100%; top: 9px; color: rgb(105, 117, 101); transition: 0.3s; z-index: -1; letter-spacing: 0.5px;}
+.effect-16:focus ~ label, .has-content.effect-16 ~ label{top: -16px; font-size: 12px; color: rgb(60, 61, 55); transition: 0.3s;}
+
+/* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+#title {
+  margin-top: 35px;
+  margin-left: 75px;
+  font-size: 54px;
+  font-family: roboto;
+  font-weight: 600;
 }
 
 #result {
-    position: relative;
-    width: 80%;
-    font-size: 28px;
+  margin: 80px;
+  position: fixed;
+  top: 41%;
+  left: 10%;
+  font-family: roboto;
+  font-weight: 600;
+}
+
+#kd {
+  position: fixed;
+  margin: 20px;
+  width: 100%;
+  top: 10%;
+}
+
+#wl {
+  position: fixed;
+  margin: 20px;
+  width: 100%;
+  top: 20%;
+}
+
+#hs {
+  position: fixed;
+  margin: 20px;
+  width: 100%;
+  top: 30%;
 }
 
 .button {
-    position: relative;
-    overflow: hidden;
-    height: 3rem;
-    padding: 0 2rem;
-    border-radius: 1.5rem;
-    background: #3d3a4e;
-    background-size: 400%;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .button:hover::before {
-    transform: scaleX(1);
-  }
-  
-  .button-content {
-    position: relative;
-    z-index: 1;
-  }
-  
-  .button::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: scaleX(0);
-    transform-origin: 0 50%;
-    width: 100%;
-    height: inherit;
-    border-radius: inherit;
-    background: linear-gradient(
-      82.3deg,
-      rgba(150, 93, 233, 1) 10.8%,
-      rgba(99, 88, 238, 1) 94.3%
-    );
-    transition: all 0.475s;
-  }
-  
+  top: 40%;
+  margin: 80px;
+  position: fixed;
+  align-items: center;
+  background: rgb(60, 61, 55);
+  border: 0 solid #E2E8F0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+  color: #ffffff;
+  display: inline-flex;
+  font-family: Inter, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  height: 56px;
+  justify-content: center;
+  line-height: 24px;
+  overflow-wrap: break-word;
+  padding: 24px;
+  text-decoration: none;
+  width: auto;
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
