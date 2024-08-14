@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="styles.css">
+<script src="js.js"></script>
+<head>
+<title>Skill calculator</title>
+</head>
+<div id="box">
+    <div id="skillcalculator">
+        <div id="kd">
+            K/D:
+            <input type="number" id="killdeath" name="K/D" min="0" max="100" >
+        </div>
+        <div id="wl">
+            W/L (Win/Loss):
+            <input type="number" id="winloss" name="W/L" min="0" max="100">
+        </div>
+        <div id="hs">
+            Headshot procentage:
+            <input type="number" id="headshots" name="Headshot procentage" min="0" max="100">
+        </div>
+        <div id="results"><h1 id="result">Skill: 0</h1></div>
+        <button class="button" onclick="calculateskill()"><span class="button-content">Calculate skill</span></button>
+    </div>
+</div>
+</body>
+</html>
