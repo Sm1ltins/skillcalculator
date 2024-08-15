@@ -165,6 +165,28 @@ input[type=number] {
   position: fixed;
 }
 
+#average3 {
+  left: 2%;
+  top: 67%;
+  position: fixed;
+  margin-left: 80px;
+  color: rgb(30, 32, 30);
+}
+
+#cs2 {
+  top: 66.8%;
+  left: 4.5%;
+  position: fixed;
+}
+
+#warning {
+  font-weight: 600;
+  left: 0.2%;
+  top: 72%;
+  position: fixed;
+  margin-left: 80px;
+  color: rgb(30, 32, 30);
+}
 
 
 #bottombar {
@@ -193,4 +215,150 @@ input[type=number] {
   left: 1%;
   position: fixed;
   color: rgb(105, 117, 101);
+}
+
+@media screen and (max-width: 900px)
+{
+  #title {
+    position: fixed;
+    color: rgb(236, 223, 204);
+    margin-top: 15px;
+    font-size: 40px;
+    font-family: roboto;
+    font-weight: 600;
+    width: 100%;
+  }
+  
+  #kd {
+    position: fixed;
+    margin: 20px;
+    width: 100%;
+    top: 10%;
+  }
+
+  #wl {
+    position: fixed;
+    margin: 20px;
+    width: 100%;
+    top: 20%;
+  }
+
+  #hs {
+    position: fixed;
+    margin: 20px;
+    width: 100%;
+    top: 30%;
+  }
+
+    /* necessary to give position: relative to parent. */
+  input[type="number"]{font: 15px/24px 'Muli', sans-serif; color: rgb(105, 117, 101); width: 100%; box-sizing: border-box; letter-spacing: 1px;}
+
+  :focus{outline: none;}
+
+  .col-3{float: left; width: 80%; margin: 40px 3%; position: relative;} /* necessary to give position: relative to parent. */
+  input[type="number"]{font: 15px/24px "Lato", Arial, sans-serif; color: rgb(105, 117, 101); width: 100%; box-sizing: border-box; letter-spacing: 1px;}
+
+  .effect-16, 
+  .effect-17, 
+  .effect-18{border: 0; padding: 4px 0; border-bottom: 1px solid rgb(105, 117, 101); background-color: transparent;}
+
+  .effect-16 ~ .focus-border{position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background-color: rgb(60, 61, 55); transition: 0.4s;}
+  .effect-16:focus ~ .focus-border,
+  .has-content.effect-16 ~ .focus-border{width: 100%; transition: 0.4s;}
+  .effect-16 ~ label{position: absolute; left: 0; width: 100%; top: 9px; color: rgb(105, 117, 101); transition: 0.3s; z-index: -1; letter-spacing: 0.5px;}
+  .effect-16:focus ~ label, .has-content.effect-16 ~ label{top: -16px; font-size: 12px; color: rgb(60, 61, 55); transition: 0.3s;}
+
+  #average {
+    left: 0%;
+    top: 57%;
+    position: fixed;
+    margin-left: 80px;
+    color: rgb(30, 32, 30);
+    font-size: small;
+  }
+  
+  #valorant {
+    top: 56.5%;
+    left: 10%;
+    position: fixed;
+  }
+  
+  #average2 {
+    left: 0%;
+    top: 62%;
+    position: fixed;
+    margin-left: 80px;
+    color: rgb(30, 32, 30);
+    font-size: small;
+  }
+  
+  #siege {
+    top: 61.6%;
+    left: 10%;
+    position: fixed;
+  }  
+
+  .button {
+    top: 37%;
+    margin-left: 40px;
+    position: fixed;
+    align-items: center;
+    background: rgb(60, 61, 55);
+    border: 0 solid #E2E8F0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-sizing: border-box;
+    color: #ffffff;
+    display: inline-flex;
+    font-family: Inter, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    height: 56px;
+    justify-content: center;
+    line-height: 24px;
+    overflow-wrap: break-word;
+    padding: 24px;
+    text-decoration: none;
+    width: auto;
+    border-radius: 8px;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+
+  #result {
+    width: 100%;
+    margin-left: 40px;
+    position: fixed;
+    top: 38%;
+    left: 47%;
+    font-family: roboto;
+    font-weight: 600;
+  }
+
+  #average3 {
+    left: 0%;
+    top: 67%;
+    position: fixed;
+    margin-left: 80px;
+    color: rgb(30, 32, 30);
+    font-size: small;
+  }
+  
+  #cs2 {
+    top: 66.6%;
+    left: 10%;
+    position: fixed;
+  }
+  
+  #warning {
+    font-weight: 600;
+    left: -8%;
+    top: 72%;
+    position: fixed;
+    margin-left: 80px;
+    color: rgb(30, 32, 30);
+    font-size: small;
+  }
+
 }
