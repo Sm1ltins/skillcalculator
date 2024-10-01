@@ -1,12 +1,12 @@
 function calculateskill() {
     var kd = document.getElementById('killdeath').value;
     var wl = document.getElementById('winloss').value;
-    var hs = document.getElementById('headshots').value;
+    var h = document.getElementById('hours').value;
     var wlreal = wl / 100;
-    var hsreal = hs / 100;
-    var skill = +kd + +wlreal + +hsreal;
-    var skill1 = skill / 3;
-    var roundedskill = Math.round(skill1 * 100) / 100;
+    var hc = h / 100
+    var skill = kd * wlreal * hc
+    var gc = skill / 3
+    var roundedskill = Math.round(gc * 100) / 100;
     document.getElementById('result').textContent = "Skill: " + roundedskill;
 }
 

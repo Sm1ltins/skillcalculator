@@ -7,9 +7,12 @@
 <meta content="width=device-width, initial-scale=1" name="viewport" />
 <link rel="icon" type="image/x-icon" href="idea.ico">
 </head>
+
 <div id="box">
+   
     <div id="titlebox">
         <div id="title">Skill Calculator</div>
+
     </div>
     <div id="skillcalculator">
        <div id="kd">
@@ -28,21 +31,21 @@
         </div> 
         <div id="hs">
             <div class="col-3 input-effect">
-                <input class="effect-16" id="headshots" type="number" placeholder="Headshot procentage" min="0" max="100" onkeyup=enforceMinMax(this)>
+                <input class="effect-16" id="hours" type="number" placeholder="Experience (hours)" min="0" onkeyup=enforceMinMax(this)>
                 <label></label>
                 <span class="focus-border"></span>
             </div>
         </div>
         <div id="results"><h1 id="result">Skill: 0</h1></div>
         <button class="button" onclick="calculateskill()"><span class="button-content">Calculate skill</span></button>
-        <div id="average"><img src="valorant.webp" alt="valorant" width="25" height="25" id="valorant">Average skill for a Valorant player: ~0.61</div>
-        <div id="average2"><img src="siege.png" alt="siege" width="25" height="25" id="siege">Average skill for a Rainbow 6 player: ~0.58</div>
-        <div id="average3"><img src="cs2.webp" alt="cs2" width="25" height="25" id="cs2">Average skill for a Counter-Strike 2 player: ~0.68</div>
-        <div id="warning">Note: This data is a rough estimation of the average skill!</div>
+        <div id="average"><img src="valorant.webp" alt="valorant" width="25" height="25" id="valorant">Average skill for a Valorant player: ~0.67</div>
+        <div id="average2"><img src="siege.png" alt="siege" width="25" height="25" id="siege">Average skill for a Rainbow 6 player: ~0.42</div>
+        <div id="average3"><img src="cs2.webp" alt="cs2" width="25" height="25" id="cs2">Average skill for a Counter-Strike 2 player: ~1.02</div>
+        <div id="warning">Note: This data is a rough estimation of the average skill! The calculator calculates skill for the game not for all games.</div>
     </div>
 </div>
 <div id="bottombar">
-    <div id="text1">version 0.3</div>
+    <div id="text1">version 0.4</div>
     <div id="text2">Skill calculator is still in BETA so beware it may not be precise!</div>
 </div>
 </body>
